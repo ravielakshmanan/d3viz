@@ -2,8 +2,9 @@
 <html lang = "en">
    <head>
    	 <meta charset="utf-8">
-      <style>
-         .node rect {
+   	 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <style>
+        .node rect {
 		  cursor: pointer;
 		  fill: #fff;
 		  fill-opacity: 0.5;
@@ -12,8 +13,12 @@
 		}
 
 		.node text {
-		  font: 16px sans-serif;
+		  font-family: 'Roboto', sans-serif;
 		  pointer-events: none;
+		}
+
+		.headline {
+		  font-family: 'Roboto', sans-serif;
 		}
 
 		.link {
@@ -21,149 +26,151 @@
 		  stroke: #9ecae1;
 		  stroke-width: 1.5px;
 		}
-      </style>
+     </style>
    </head>
 
    <body>
+   	  <h2 class="headline">The Great Smart Home Race of 2018</h2>
+   	  <h4 class="headline">(Click on the companies to know more)</h4>
    	  <script src="https://d3js.org/d3.v4.min.js"></script>
       <script>
       	var data_tree = {
-							 "name": "The Battle for Smart Home",
-							 "children": [
-							  {
-							   "name": "Amazon",
-							   "children": [
-							    {
-							     "name": "Strengths",
-							     "children": [
-							      {"name": "Retail reach", "size": 3938},
-							      {"name": "Head start in the smart home space (has over ~30,000 skills)", "size": 3812},
-							      {"name": "Can advertise its own products on Amazon.com", "size": 3812}
-							     ]
-							    },
-							    {
-							     "name": "Weaknesses",
-							     "children": [
-							      {"name": "Kitchen-sink approach, throwing Alexa into everything to see what sticks", "size": 3534},
-							      {"name": "No insight into personalised information like Google", "size": 5731},
-							      {"name": "Knows your purchase pattern, but lags behind rivals when it comes to identifying friends, events etc.", "size": 5731},
-							      {"name": "No YouTube", "size": 7840}
-							     ]
-							    },
-							    {
-							     "name": "Opportunities",
-							     "children": [
-							      {"name": "Can leverage its position as a retail behemoth to sell third-party as well as its own products", "size": 7074}
-							     ]
-							    },
-							    {
-							     "name": "Threats",
-							     "children": [
-							      {"name": "Google is fast catching up", "size": 7074}
-							     ]
-							    }
-							   ]
-							  },
-							  {
-							   "name": "Google",
-							   "children": [
-							    {
-							     "name": "Strengths",
-							     "children": [
-							      {"name": "Superior service", "size": 3938},
-							      {"name": "Google service integration is the best", "size": 3812},
-							      {"name": "YouTube access (including free 6-months of YouTube Premium)", "size": 6714}
-							     ]
-							    },
-							    {
-							     "name": "Weaknesses",
-							     "children": [
-							      {"name": "Is still behind Amazon (for now)", "size": 3534},
-							      {"name": "Can be borderline creepy", "size": 5731}
-							     ]
-							    },
-							    {
-							     "name": "Opportunities",
-							     "children": [
-							      {"name": "Full-fledged entry into hardware with its own lineup of Google Assistant-powered devices", "size": 7074}
-							     ]
-							    },
-							    {
-							     "name": "Threats",
-							     "children": [
-							      {"name": "Can face Facebook-like scrutiny in the future", "size": 7074}
-							     ]
-							    }
-							   ]
-							  },
-							  {
-							   "name": "Apple",
-							   "children": [
-							    {
-							     "name": "Strengths",
-							     "children": [
-							      {"name": "Trusted (better than its rivals in any case)", "size": 3938},
-							      {"name": "Close integration with Apple ecosystem", "size": 3812},
-							      {"name": "HomePod has excellent sound quality", "size": 6714}
-							     ]
-							    },
-							    {
-							     "name": "Weaknesses",
-							     "children": [
-							      {"name": "Siri is nowhere near Google Assistant or Alexa", "size": 3534},
-							      {"name": "Apple's plans for smart home are still yet to be realised", "size": 5731}
-							     ]
-							    },
-							    {
-							     "name": "Opportunities",
-							     "children": [
-							      {"name": "Can come fashionably late given brand loyalty", "size": 7074},
-							      {"name": "Appeals to privacy-conscious", "size": 7074}
-							     ]
-							    },
-							    {
-							     "name": "Threats",
-							     "children": [
-							      {"name": "Heavily reliant on iPhone to push its other products", "size": 7074}
-							     ]
-							    }
-							   ]
-							  },
-							  {
-							   "name": "Facebook",
-							   "children": [
-							    {
-							     "name": "Strengths",
-							     "children": [
-							      {"name": "Possibly the best way to reach your friends", "size": 3938}
-							     ]
-							    },
-							    {
-							     "name": "Weaknesses",
-							     "children": [
-							      {"name": "Abound with privacy concerns", "size": 3534},
-							      {"name": "No compelling features beyond video calls", "size": 5731},
-							      {"name": "Lack of Google-like personalised data for constextual suggestions a la Google Assistant", "size": 7840},
-							      {"name": "Portal release comes at a time when it’s in the midst of another massive data breach", "size": 5914}
-							     ]
-							    },
-							    {
-							     "name": "Opportunities",
-							     "children": [
-							      {"name": "???", "size": 7074}
-							     ]
-							    },
-							    {
-							     "name": "Threats",
-							     "children": [
-							      {"name": "Facebook’s tryst with hardware has been disastrous at best (Remember the Facebook phone?)", "size": 7074},
-							      {"name": "Company’s trust among users is at an all-time low", "size": 7074}
-							     ]
-							    }
-							   ]
-							  }
-							 ]
-							}
+						 "name": "The Battle for Smart Home",
+						 "children": [
+						  {
+						   "name": "Amazon",
+						   "children": [
+						    {
+						     "name": "Strengths",
+						     "children": [
+						      {"name": "Retail reach", "size": 3938},
+						      {"name": "Head start in the smart home space (has over ~30,000 skills)", "size": 3812},
+						      {"name": "Can advertise its own products on Amazon.com", "size": 3812}
+						     ]
+						    },
+						    {
+						     "name": "Weaknesses",
+						     "children": [
+						      {"name": "Kitchen-sink approach, throwing Alexa into everything to see what sticks", "size": 3534},
+						      {"name": "No insight into personalised information like Google", "size": 5731},
+						      {"name": "Knows your purchase pattern, but lags behind rivals when it comes to identifying friends, events etc.", "size": 5731},
+						      {"name": "No YouTube", "size": 7840}
+						     ]
+						    },
+						    {
+						     "name": "Opportunities",
+						     "children": [
+						      {"name": "Can leverage its dominant position as a retail behemoth to sell third-party as well as its own products", "size": 7074}
+						     ]
+						    },
+						    {
+						     "name": "Threats",
+						     "children": [
+						      {"name": "Google is fast catching up", "size": 7074}
+						     ]
+						    }
+						   ]
+						  },
+						  {
+						   "name": "Google",
+						   "children": [
+						    {
+						     "name": "Strengths",
+						     "children": [
+						      {"name": "Google Assistant is easily the best AI-driven digital assistant", "size": 3938},
+						      {"name": "Tight integration with Google services", "size": 3812},
+						      {"name": "YouTube access (including free 6-months of YouTube Premium)", "size": 6714}
+						     ]
+						    },
+						    {
+						     "name": "Weaknesses",
+						     "children": [
+						      {"name": "Is still behind Amazon (for now)", "size": 3534},
+						      {"name": "Can be borderline creepy", "size": 5731}
+						     ]
+						    },
+						    {
+						     "name": "Opportunities",
+						     "children": [
+						      {"name": "Full-fledged entry into hardware with its own lineup of Google Assistant-powered devices", "size": 7074}
+						     ]
+						    },
+						    {
+						     "name": "Threats",
+						     "children": [
+						      {"name": "Can face Facebook-like scrutiny in the future", "size": 7074}
+						     ]
+						    }
+						   ]
+						  },
+						  {
+						   "name": "Apple",
+						   "children": [
+						    {
+						     "name": "Strengths",
+						     "children": [
+						      {"name": "Trusted (better than its rivals in any case)", "size": 3938},
+						      {"name": "Close integration with Apple ecosystem", "size": 3812},
+						      {"name": "HomePod has excellent sound quality", "size": 6714}
+						     ]
+						    },
+						    {
+						     "name": "Weaknesses",
+						     "children": [
+						      {"name": "Siri is nowhere near Google Assistant or Alexa", "size": 3534},
+						      {"name": "Apple's plans for smart home are still yet to be fully realised", "size": 5731}
+						     ]
+						    },
+						    {
+						     "name": "Opportunities",
+						     "children": [
+						      {"name": "Can come fashionably late given its brand loyalty", "size": 7074},
+						      {"name": "Appeals to privacy-conscious", "size": 7074}
+						     ]
+						    },
+						    {
+						     "name": "Threats",
+						     "children": [
+						      {"name": "Heavily reliant on iPhone to push its other products", "size": 7074}
+						     ]
+						    }
+						   ]
+						  },
+						  {
+						   "name": "Facebook",
+						   "children": [
+						    {
+						     "name": "Strengths",
+						     "children": [
+						      {"name": "Possibly the best way to reach your friends", "size": 3938}
+						     ]
+						    },
+						    {
+						     "name": "Weaknesses",
+						     "children": [
+						      {"name": "Abound with privacy concerns", "size": 3534},
+						      {"name": "No compelling features beyond video calls", "size": 5731},
+						      {"name": "Lack of Google-like personalised data for contextual suggestions a la Google Assistant", "size": 7840},
+						      {"name": "Portal release comes at a time when it’s in the midst of another massive data breach", "size": 5914}
+						     ]
+						    },
+						    {
+						     "name": "Opportunities",
+						     "children": [
+						      {"name": "???", "size": 7074}
+						     ]
+						    },
+						    {
+						     "name": "Threats",
+						     "children": [
+						      {"name": "Facebook’s tryst with hardware has been disastrous at best (Remember the Facebook phone?)", "size": 7074},
+						      {"name": "Company’s trust among users is at an all-time low", "size": 7074}
+						     ]
+						    }
+						   ]
+						  }
+						 ]
+						}
         
         var margin = {top: 30, right: 20, bottom: 30, left: 20},
 	    width = 960,
@@ -197,6 +204,7 @@
 		  root = d3.hierarchy(data_t);
 		  root.x0 = 0;
 		  root.y0 = 0;
+		  root.children.forEach(collapse);
 		  update(root);
 		}
 
@@ -310,6 +318,15 @@
 		    d._children = null;
 		  }
 		  update(d);
+		}
+
+		// Collapse the node and all it's children
+		function collapse(d) {
+		  if(d.children) {
+		    d._children = d.children
+		    d._children.forEach(collapse)
+		    d.children = null
+		  }
 		}
 
 		function color(d) {
